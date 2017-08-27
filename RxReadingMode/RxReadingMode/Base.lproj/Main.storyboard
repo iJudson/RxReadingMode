@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A264c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RxReadingMode" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="模式切换" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X67-zw-eaQ">
+                                <rect key="frame" x="56" y="167.5" width="69.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主题风格" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f57-ob-Jp6">
+                                <rect key="frame" x="56" y="258" width="69.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIk-cb-8H2">
+                                <rect key="frame" x="273" y="253.5" width="62" height="30"/>
+                                <state key="normal" title="点击查看">
+                                    <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                </state>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="R1F-8A-z48">
+                                <rect key="frame" x="286" y="163" width="51" height="31"/>
+                                <connections>
+                                    <action selector="toggleReadingMode:" destination="BYZ-38-t0r" eventType="valueChanged" id="daY-zs-OxA"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="阅读模式" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYX-11-I6e">
+                                <rect key="frame" x="0.0" y="70" width="375" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前为夜间模式" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTs-m0-OMM">
+                                <rect key="frame" x="0.0" y="99" width="375" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nq1-Fy-clJ">
+                                <rect key="frame" x="20" y="40" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="B7K-Ko-hlk"/>
+                                    <constraint firstAttribute="height" constant="24" id="gmu-Vw-Urm"/>
+                                </constraints>
+                                <state key="normal" image="day_BackArrow@24x24"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DoubleCat" translatesAutoresizingMaskIntoConstraints="NO" id="Jr2-KR-rPf">
+                                <rect key="frame" x="56" y="353.5" width="279" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="215" id="BwD-ou-gpj"/>
+                                    <constraint firstAttribute="width" constant="279" id="ge1-43-Bzk"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f57-ob-Jp6" firstAttribute="top" secondItem="X67-zw-eaQ" secondAttribute="bottom" constant="70" id="0Yh-6r-JQN"/>
+                            <constraint firstItem="Jr2-KR-rPf" firstAttribute="top" secondItem="RIk-cb-8H2" secondAttribute="bottom" constant="70" id="0cv-Sx-T4w"/>
+                            <constraint firstItem="xYX-11-I6e" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="235-2o-x9a"/>
+                            <constraint firstItem="nq1-Fy-clJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="6da-Xp-HRC"/>
+                            <constraint firstItem="X67-zw-eaQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="83a-d5-tBs"/>
+                            <constraint firstAttribute="trailing" secondItem="R1F-8A-z48" secondAttribute="trailing" constant="40" id="9xR-Ea-t0y"/>
+                            <constraint firstAttribute="trailing" secondItem="xYX-11-I6e" secondAttribute="trailing" id="A7B-2Q-ARQ"/>
+                            <constraint firstItem="Jr2-KR-rPf" firstAttribute="trailing" secondItem="RIk-cb-8H2" secondAttribute="trailing" id="FfZ-eN-aFy"/>
+                            <constraint firstItem="FTs-m0-OMM" firstAttribute="top" secondItem="xYX-11-I6e" secondAttribute="bottom" constant="6" id="Gfv-Lt-6lZ"/>
+                            <constraint firstItem="Jr2-KR-rPf" firstAttribute="leading" secondItem="f57-ob-Jp6" secondAttribute="leading" id="U8M-aE-X3d"/>
+                            <constraint firstItem="FTs-m0-OMM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aNp-Yt-fOO"/>
+                            <constraint firstItem="f57-ob-Jp6" firstAttribute="leading" secondItem="X67-zw-eaQ" secondAttribute="leading" id="aYm-fQ-URB"/>
+                            <constraint firstItem="R1F-8A-z48" firstAttribute="centerY" secondItem="X67-zw-eaQ" secondAttribute="centerY" id="buh-YH-ja4"/>
+                            <constraint firstItem="RIk-cb-8H2" firstAttribute="centerY" secondItem="f57-ob-Jp6" secondAttribute="centerY" id="diL-43-r9B"/>
+                            <constraint firstItem="xYX-11-I6e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eRk-Cz-Yo4"/>
+                            <constraint firstItem="RIk-cb-8H2" firstAttribute="trailing" secondItem="R1F-8A-z48" secondAttribute="trailing" id="jZl-IE-X3Z"/>
+                            <constraint firstAttribute="trailing" secondItem="FTs-m0-OMM" secondAttribute="trailing" id="k9n-bC-0Kf"/>
+                            <constraint firstItem="xYX-11-I6e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mmV-qZ-jXy"/>
+                            <constraint firstItem="nq1-Fy-clJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="mof-t6-6sV"/>
+                            <constraint firstItem="X67-zw-eaQ" firstAttribute="top" secondItem="FTs-m0-OMM" secondAttribute="bottom" constant="54" id="zaA-cs-MtQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="nq1-Fy-clJ" id="DGQ-6X-YQs"/>
+                        <outlet property="checkButton" destination="RIk-cb-8H2" id="7dn-L4-GJJ"/>
+                        <outlet property="descriptionImageView" destination="Jr2-KR-rPf" id="d7J-0q-1WS"/>
+                        <outlet property="modeDetailLabel" destination="FTs-m0-OMM" id="FiS-F9-U5o"/>
+                        <outlet property="modeTitleLabel" destination="xYX-11-I6e" id="tW9-If-yH4"/>
+                        <outlet property="modeToggleLabel" destination="X67-zw-eaQ" id="Dqq-F6-bKe"/>
+                        <outlet property="themeStyleLabel" destination="f57-ob-Jp6" id="4qz-8u-kJZ"/>
+                        <outlet property="toggleSwitch" destination="R1F-8A-z48" id="Tjg-5d-GuQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="452" y="137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="DoubleCat" width="709" height="584"/>
+        <image name="day_BackArrow@24x24" width="24" height="24"/>
+    </resources>
+</document>
